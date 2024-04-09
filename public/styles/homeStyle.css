@@ -1,0 +1,87 @@
+body {
+  background-image: url("/images/PreHome.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 90vw;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 690px;
+}
+
+.left-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.right-container {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.top-left-container,
+.bottom-left-container {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  background-color: floralwhite;
+}
+
+.image-container {
+  border-radius: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.top-img {
+  background-image: url("/images/MasterCard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bottom-img {
+  background-image: url("/images/Customers.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-container {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.transactions-container {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  grid-template-rows: 2fr repeat(2, 1fr);
+  background-color: floralwhite;
+}
+
+.transaction-rows {
+  display: grid;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.4);
+  grid-template-columns: 2fr 2fr 2fr 2fr 3fr;
+}
+
+.headings-container {
+  border-right: 0.1rem solid rgba(0, 0, 0, 0.4);
+}
+
+.amount {
+  border-left: 0.1rem solid rgba(0, 0, 0, 0.4);
+}

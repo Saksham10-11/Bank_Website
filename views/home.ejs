@@ -1,0 +1,53 @@
+<%- include('partials/postLoginHeader.html') %>
+
+<link rel="stylesheet" href="styles/homeStyle.css" />
+
+<div class="main-container">
+  <div class="left-container">
+    <div class="top-left-container">
+      <div class="image-container top-img"></div>
+      <div class="text-container">
+        <p>Total Accounts Balance</p>
+        <% if(locals.totalBalance) {%>
+        <h2>$<%= totalBalance %></h2>
+        <% } else { %>
+        <h2>$0</h2>
+        <% } %>
+      </div>
+    </div>
+    <div class="bottom-left-container">
+      <div class="image-container bottom-img"></div>
+      <div class="text-container">
+        <p>Total Active Customers</p>
+        <% if(locals.totalCustomers) {%>
+        <h2>$<%= totalCustomers %></h2>
+        <% } else { %>
+        <h2>0</h2>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <div class="right-container">
+    <div class="transactions-container">
+      <div class="transaction-headings-container transaction-rows">
+        <div class="date headings-container">Date</div>
+        <div class="account-number headings-container">Account No.</div>
+        <div calss="type headings-container">Type</div>
+        <div class="amount headings-container">Amount</div>
+        <div class="transaction-id">Transaction ID</div>
+      </div>
+    </div>
+    <% if(locals.transactions) { %> <% for(let i=0;i< transactions.length;++i) {
+    %>
+    <div class="transaction-rows">
+      <div class="date"><%= transactions[i].date%></div>
+      <div class="account-number"><%= transactions[i].accountNumber%></div>
+      <div calss="type"><%= transactions[i].type%></div>
+      <div class="amount"><%= transactions[i].amount%></div>
+      <div class="transaction-id"><%= transactions[i].transactionID%></div>
+    </div>
+    <% } %> <% } %>
+  </div>
+</div>
+
+<%- include('partials/footer.html') %>
